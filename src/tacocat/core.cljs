@@ -1,5 +1,6 @@
 (ns tacocat.core
-  (:require [cljs.nodejs :as nodejs]))
+  (:require [cljs.nodejs :as nodejs]
+            [clojure.string :as string]))
 
 (nodejs/enable-util-print!)
 
@@ -15,7 +16,7 @@
 
 (def bot (builder.UniversalBot.
           connector
-          #(.send % (str "You said: " (.. % -message -text)))))
+          #(.send % (str "You said: " (string/reverse (.. % -message -text))))))
  
 ; define server
 (def server (.createServer restify))
