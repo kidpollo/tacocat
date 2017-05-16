@@ -18,7 +18,7 @@ To run localy you need to run the boot build for dev which will watch any change
 In another terminal
 
     cd target
-    node export MICROSOFT_APP_ID="_your-id_" && export MICROSOFT_APP_PASSWORD="_your-pass_"  &&  node main.js
+    export MICROSOFT_APP_ID="_your-id_" && export MICROSOFT_APP_PASSWORD="_your-pass_"  &&  node main.js
 
 Open the Bot Framework Emulator and point it to `http://localhost:3978/api/messages` and provide app id and password.
 
