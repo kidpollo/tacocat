@@ -1,3 +1,8 @@
+*~
+.DS_Store
+*~
+*#
+.#*
 .nrepl-history
 node_modules/
-target/  
+target/

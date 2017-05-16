@@ -23,7 +23,8 @@
   (.post server "/api/messages" (.listen connector)))
 
 (defn main [& args]
-  (.listen server 3978 (println " localhost listening port 3978" )))
+  (let [port (or (.-PORT (.-env js/process)) 3978)] 
+    (.listen server port (println (str "localhost listening port:" port) ))))
 
 (set! *main-cli-fn* main)
 

@@ -14,10 +14,10 @@
          :compiler-options {:target :nodejs})
    (target)))
 
-(deftask prod
+(deftask build
   "Compile for production"
   []
   (comp
-   (cljs :optimizations :advanced
+   (cljs :optimizations :simple
          :compiler-options {:target :nodejs})
    (target)))
